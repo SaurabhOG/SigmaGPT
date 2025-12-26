@@ -12,11 +12,17 @@ function ChatWindow() {
     currThreadId,
     prevChats,
     setPrevChats,
+    setNewChat,
   } = useContext(MyContext);
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    setReply(null); // stop typing effect
+  }, [currThreadId]);
+
   const getReply = async () => {
     setLoading(true);
+    setNewChat(false);
     // console.log("message", prompt, "threadId", currThreadId);
     const options = {
       method: "POST",
