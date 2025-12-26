@@ -62,3 +62,34 @@ button:hover {
   text-align: center;
   border-top: solid 0.25px rgba(255, 255, 255, 0.5);
 }
+
+/* scrollable chat area */
+.history {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Chrome / Edge / Safari */
+.history::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history::-webkit-scrollbar-track {
+  background: #191919;
+}
+
+.history::-webkit-scrollbar-thumb {
+  background: #6b6b6b;
+  border-radius: 10px;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+  background: #9a9a9a;
+}
+
+/* Firefox */
+.history {
+  scrollbar-width: thin;
+  scrollbar-color: #6b6b6b #1f1f1f;
+}
