@@ -93,3 +93,19 @@ button:hover {
   scrollbar-width: thin;
   scrollbar-color: #6b6b6b #1f1f1f;
 }
+
+/*  delete thread */
+.fa-trash {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+}
+
+.history li:hover .fa-trash {
+  opacity: 1;
+  color: #fff;
+}
+
+.fa-trash:hover {
+  color: #f87171 !important;
+}
